@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff8fb;
+}
+
+header{
+    background:#d63384;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.slider{
+    position:relative;
+    height:450px;
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.texto{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.4);
+    color:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.titulo{
+    text-align:center;
+    margin:40px;
+    color:#d63384;
+}
+
+.grid{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.producto{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    padding-bottom:20px;
+}
+
+.producto img{
+    width:100%;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 18px;
+    border:none;
+    background:#d63384;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#b61d69;
+}
+
+.info{
+    display:none;
+    padding:15px;
+}
+
+.info.activo{
+    display:block;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+footer{
+    margin-top:50px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:1000px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
